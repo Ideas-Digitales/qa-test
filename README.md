@@ -26,7 +26,7 @@ Desarrollar en Postman los test para verificar la validación de campos y su res
      correctamente se obtenga un error 500
      
      Estructura de la respuesta en un error de validación:
-     
+     ```
      {
        "message": "general message",
        "errors": {
@@ -38,6 +38,7 @@ Desarrollar en Postman los test para verificar la validación de campos y su res
          ],
        }
      }
+     ```
 
 *Los test desarrollados en Postman deberán ser compartidos por correo electrónico o el medio especificado*
 

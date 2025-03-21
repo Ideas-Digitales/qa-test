@@ -1,0 +1,34 @@
+{
+  "name": "Authentication Microservice Devcontainer",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "workcontainer",
+  "workspaceFolder": "/var/www/html",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.shell.linux": "/bin/bash",
+        "[json]": {
+          "editor.defaultFormatter": "esbenp.prettier-vscode"
+        },
+        "[jsonc]": {
+          "editor.defaultFormatter": "esbenp.prettier-vscode"
+        }
+      },
+      "extensions": [
+        "bmewburn.vscode-intelephense-client",
+        "esbenp.prettier-vscode",
+        "redjue.git-commit-plugin",
+        "aaron-bond.better-comments",
+        "Gruntfuggly.todo-tree",
+        "ronvanderheijden.phpdoc-generator",
+        "eamodio.gitlens",
+        "donjayamanne.githistory",
+        "cweijan.vscode-database-client2"
+      ]
+    }
+  },
+  "initializeCommand": "cp .env.example .env && cp .env.devcontainer.example .env.devcontainer",
+  "postCreateCommand": "bash .devcontainer/init.sh",
+  "remoteUser": "developer",
+  "forwardPorts": []
+}

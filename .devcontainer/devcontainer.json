@@ -27,7 +27,7 @@
       ]
     }
   },
-  "initializeCommand": "cp .env.example .env && cp .env.devcontainer.example .env.devcontainer",
+  "initializeCommand": "cp --update=none .env.example .env && cp --update=none .env.devcontainer.example .env.devcontainer",
   "postCreateCommand": "bash .devcontainer/init.sh",
   "remoteUser": "developer",
   "forwardPorts": []

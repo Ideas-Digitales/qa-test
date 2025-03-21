@@ -10,14 +10,18 @@
 
 ### Prueba 1
 
-Desarrollar test de validación de campos para el endpoint POST http://localhost:8080/api/v1/register
-   - Headers: Accept: application/json
-   - El cuerpo de la solicitud es JSON
-   - El campo rut es requerido
-   - El campo email es requerido
-   - El campo password es requerido
-   - El código http de error de validación es 422
-   - La implementación del endpoint requiere de una conexión con Amazon Cognito,
+Desarrollar en Postman los test para verificar la validación de campos y su respectivo response en el endpoint `/api/v1/register`
+   Solicitud en CURL:
+   ```
+   curl -H "Accept: application/json" -X POST http://localhost:8080/api/v1/register
+   ```
+
+   - El body de la solicitud debe tener los siguientes campos en formato JSON
+     - El campo rut debe ser requerido
+     - El campo email debe ser requerido
+     - El campo password debe ser requerido
+   - El código http de error de validación debe ser 422
+   - Nota: La implementación del endpoint requiere de una conexión con Amazon Cognito,
      por lo cual en entorno local, es normal que al mandar todos los datos
      correctamente se obtenga un error 500
      
@@ -34,6 +38,8 @@ Desarrollar test de validación de campos para el endpoint POST http://localhost
          ],
        }
      }
+
+*Los test desarrollados en Postman deberán ser compartidos por correo electrónico o el medio especificado*
 
 ### Prueba 2
 

@@ -42,6 +42,13 @@ Desarrollar en Postman los test para verificar la validación de campos y su res
 
 *Los test desarrollados en Postman deberán ser compartidos por correo electrónico o el medio especificado*
 
+---
+
+>>  # Respuesta test 1: 
+>>  **Dejé en la carpeta test/postmanTest/  un archivo llamado ```ideas-digitales.postman_collection.json``` con la colección que podrán importar desde postman o ejecutarlo en newman para correr las pruebas**
+
+---
+
 ### Prueba 2
 
 Completar el test "test_register_user" en tests/Feature/CognitoControllerTest.php

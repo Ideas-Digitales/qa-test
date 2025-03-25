@@ -32,8 +32,17 @@ class CognitoControllerTest extends TestCase
             ->once()
             ->andReturn(true);
 
-        // Ejecutar solicitud POST /api/v1/register
-        // Assert HTTP 200
-        // Assert json: { status: "success", message: "Registro exitoso" }
+        $response = $this->postJson('/api/v1/register', [
+            'rut' => '166056659',
+            'email' => 'test@example.com',
+            'password' => 'password123'
+        ]);
+
+        $response->assertStatus(200)
+                ->assertJson([
+                    'status' => 'success',
+                    'message' => 'Registro exitoso'
+                ]);
     }
+
 }

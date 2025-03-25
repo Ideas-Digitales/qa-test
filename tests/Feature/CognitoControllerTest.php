@@ -23,26 +23,26 @@ class CognitoControllerTest extends TestCase
     }
 
     public function test_register_user()
-{
-    $this->cognitoClient->shouldReceive('adminCreateUser')
-        ->once()
-        ->andReturn(['UserConfirmed' => true]);
+    {
+        $this->cognitoClient->shouldReceive('adminCreateUser')
+            ->once()
+            ->andReturn(['UserConfirmed' => true]);
 
-    $this->cognitoClient->shouldReceive('adminSetUserPassword')
-        ->once()
-        ->andReturn(true);
+        $this->cognitoClient->shouldReceive('adminSetUserPassword')
+            ->once()
+            ->andReturn(true);
 
-    $response = $this->postJson('/api/v1/register', [
-        'rut' => '166056659',
-        'email' => 'test@example.com',
-        'password' => 'password123'
-    ]);
+        $response = $this->postJson('/api/v1/register', [
+            'rut' => '166056659',
+            'email' => 'test@example.com',
+            'password' => 'password123'
+        ]);
 
-    $response->assertStatus(200)
-             ->assertJson([
-                 'status' => 'success',
-                 'message' => 'Registro exitoso'
-             ]);
-}
+        $response->assertStatus(200)
+                ->assertJson([
+                    'status' => 'success',
+                    'message' => 'Registro exitoso'
+                ]);
+    }
 
 }
